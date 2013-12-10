@@ -18,6 +18,10 @@ class ApplicationController < ActionController::Base
        end
     end
 
+  def after_update_path_for(resource)
+      user_path(resource)
+    end
+
      protected
 
      def configure_permitted_parameters
