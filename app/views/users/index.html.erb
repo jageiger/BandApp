@@ -1,12 +1,12 @@
 <div class="container">
 <div class="container">
-<h1>Userss</h1>
+<h1>Users</h1>
 
 <table class='table'>
   <thead>
     <tr>
       <th>Name</th>
-      <th>Aboutus</th>
+      <th>About</th>
       <th>Schedule</th>
       <th></th>
       <th></th>
@@ -17,8 +17,8 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><strong><%= link_to user.firstname, user_path(user) %></strong></td>
-        <td><%= user.lastname %></td>
+        <td><strong><%= link_to user.firstname+" "+user.lastname, user_path(user) %></strong></td>
+        <td><%= user.aboutme %></td>
         <td><%= user.email %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
