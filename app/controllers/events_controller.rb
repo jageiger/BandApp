@@ -4,8 +4,10 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @band = Band.find(params[:band_id])
-    @events = @band.events.all
+     @bands = Band.all
+ +   @bands.each do |band|
+       @events = band.events.all
+     end
   end
 
   # GET /events/1
