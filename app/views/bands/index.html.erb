@@ -1,0 +1,33 @@
+<div class="container">
+<h1>Listing bands</h1>
+
+<table class='table'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Aboutus</th>
+      <th>Schedule</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bands.each do |band| %>
+      <tr>
+        <td><strong><%= link_to band.name, band_path(band) %></strong></td>
+        <td><%= band.aboutus %></td>
+        <td><%= band.schedule %></td>
+        <td><%= link_to 'Show', band %></td>
+        <td><%= link_to 'Edit', edit_band_path(band) %></td>
+        <td><%= link_to 'Destroy', band, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Band', new_band_path %>
+</div>

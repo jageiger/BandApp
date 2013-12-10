@@ -1,0 +1,54 @@
+<div class="container">
+
+<div class="row">
+	<div class="col-md-2">
+<br>
+		<div class="media">
+  		<a class="pull-left" >
+    		<img class="media-object" src="/images/Harry.jpg" alt="Harry" width="100%" height="100%">
+  		</a>
+	    </div>
+
+    </div>
+
+    <div class="col-md-6" >
+    <br>
+    <h3 class="user-name"> 
+<%= @user.firstname%><%= @user.lastname%></h3>
+<h4>&nbsp;<strong>About me:  </strong><%= @user.aboutme%></h4>
+<br><br><br><br><br><br>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="btn-group ">
+  <a><%= link_to'Create Band', new_band_path, type: 'button', class: 'btn btn-default' %></a>
+  <a><%= link_to'Join Band', bands_path, type: 'button', class: 'btn btn-default' %></a>
+  <a><%= link_to'Photos', root_path, type: 'button', class: 'btn btn-default' %></a>
+  <a><%= link_to'Update info', edit_user_registration_path, type: 'button', class: 'btn btn-default' %></a>
+  <a><%= link_to'Users', users_path, type: 'button', class: 'btn btn-default' %></a>
+  
+</div>
+</div>
+</div>
+
+<div class="row">
+   <div class="col-md-3"><p>
+   <br>
+    <h4><strong>Bands followed:</strong></h4>
+      <p>
+        <%= %>
+      </p>
+  -----------------------------------------------
+        <h4><strong>News:</strong></h4>
+        <%= "hello" %>
+      </p>
+   </div>
+   <div class="col-md-7 ">
+      <h3><strong>Updates:</strong></h3>
+   </div>
+   <div class="col-md-1 ">
+      <h4><strong></strong></h4>
+   </div>
+
+</div>

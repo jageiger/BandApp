@@ -1,0 +1,60 @@
+
+<p id="notice"><%= notice %></p>
+<br><br><br><br><br>
+<div class="container">
+ 	<div class="row">
+	   	<div class="col-md-12">
+		  	<strong class="band-name">
+		  		<%= @band.name %>
+		  	</strong>
+		</div>
+	</div>
+
+	<div class="row">
+	   	<div class="col-md-10">
+			<h4>
+			  <strong>About us:</strong>
+			  <%= @band.aboutus %><br><br>
+			  <strong>Genre:</strong>
+			  <%= @band.aboutus %>
+			</h4>
+			<p class="text-right"><%= link_to 'Edit', edit_band_path(@band) %> |
+			<%= link_to 'Back', bands_path %></p>
+		</div>
+	</div>
+	<br><br>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="btn-group ">
+			  <a><%= button_to'Follow', band_followers_path(@band) %></a>
+			  <a><%= link_to'Join', band_path(@band), type: 'button', class: 'btn btn-default' %></a>
+			  <a><%= link_to'Photos', band_path(@band), type: 'button', class: 'btn btn-default' %></a>
+			  <a><%= link_to'Videos', band_path(@band), type: 'button', class: 'btn btn-default' %></a>
+			  <a><%= link_to'Performances', band_path(@band), type: 'button', class: 'btn btn-default' %></a>
+			</div>
+		</div>
+	</div>
+	<br><br>
+	
+	<div class="row">
+		<div class="col-md-3"><p>
+   <br>
+    <h4><strong>Schedule:</strong></h4>
+      <p>
+        <%= render @band.events %>
+      </p>
+  -------------------------------------------------------
+        <h4>New Event</h4>
+        <%= render "events/form" %>
+      </p>
+   </div>
+		<div class="col-md-7 ">
+		      <h3><strong>Updates:</strong></h3>
+		</div>
+		<div class="col-md-1 ">
+		      <h4><strong>Members:</strong></h4>
+		</div>
+	</div>
+</div>
+
+

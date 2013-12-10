@@ -1,0 +1,12 @@
+<h5><strong>
+  <%= event.title %>:
+</strong></h5>
+<p>
+  <%= event.description %>
+  </p>
+  <p>
+  <%= event.dateTime %>
+  </p>
+  <p>
+   <%= button_to 'Delete', band_event_path(@band, event),:confirm => "Delete Event: #{event.title}?", method: :delete, :class=> :destroy %>
+</p>
